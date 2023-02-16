@@ -6,7 +6,7 @@ type Props = {};
 const Projects = (props: Props) => {
   const projects = [1, 2, 3, 4, 5, 6];
   return (
-    <div className="h-screen relative flex overflow-hidden flex-col md:flex:row max-w-full justify-center items-center mx-auto z-0 ">
+    <div className="h-screen relative flex overflow-hidden flex-col md:flex:row max-w-full justify-center items-center mx-auto z-0 px-10">
       <h3 className="absolute top-24 uppercase tracking-[1rem] text-gray-500 text-2xl ">
         Projects
       </h3>
@@ -22,19 +22,21 @@ const Projects = (props: Props) => {
           >
             <motion.img
               initial={{
+                y: -100,
                 opacity: 0,
-                y: -300,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
               }}
               transition={{
-                duration: 1,
+                duration: 1.2,
               }}
-              viewport={{ once: true }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+              }}
+              viewport={{
+                once: true,
+              }}
               src="https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
-              className="object-cover w-24 h-24 md:h-48 md:w-48 xl:h-64 xl:w-64"
+              className="object-cover object-center w-24 h-24 md:h-48 md:w-48 xl:h-64 xl:w-64"
             />
 
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">

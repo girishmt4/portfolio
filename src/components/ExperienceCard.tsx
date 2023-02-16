@@ -30,7 +30,7 @@ function ExperienceCard({}: Props) {
         <p className="text-2xl font-bold mt-1">Data Strategies Interchange</p>
         <div className="flex flex-row space-x-2 my-2">
           {/* Tech Used */}
-          <img
+          <motion.img
             className="h-10 w-10 rounded-full"
             src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Javascript_Logo.png"
             alt=""
