@@ -35,25 +35,25 @@ const About = (props: Props) => {
         viewport={{
           once: true,
         }}
-        className="mb-10 md:mb-0 flex-shrink-0 rounded-full h-40 w-40 mx-auto object-cover md:rounded-full md:w-64 md:h-64 xl:w-[20rem] xl:h-[20rem]"
+        className="mb-10 md:mb-0 flex-shrink-0 rounded-full h-40 w-40 mx-auto object-cover md:w-64 md:h-64 xl:w-[20rem] xl:h-[20rem]"
         src="https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
         alt=""
       />
       <motion.div
-        initial={{
-          x: 500,
-          opacity: 0,
-        }}
-        transition={{
-          duration: 1.2,
-        }}
-        whileInView={{
-          x: 0,
-          opacity: 1,
-        }}
-        viewport={{
-          once: true,
-        }}
+        // initial={{
+        //   x: 500,
+        //   opacity: 0,
+        // }}
+        // transition={{
+        //   duration: 1.2,
+        // }}
+        // whileInView={{
+        //   x: 0,
+        //   opacity: 1,
+        // }}
+        // viewport={{
+        //   once: true,
+        // }}
         className="space-y-10 px-0 md:px-10"
       >
         <h4 className="text-4xl font-semibold">

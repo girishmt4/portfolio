@@ -17,6 +17,7 @@ const Hero = (props: Props) => {
   });
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
+      {/* <div className="w-[90%] absolute top-[30%] bg-blue-900/40 left-0 h-[500px] overflow-hidden z-0"></div> */}
       <BackgroundCircles />
       <div className="z-20">
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[1rem]">
