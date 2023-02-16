@@ -28,7 +28,7 @@ const Hero = (props: Props) => {
           <Cursor cursorColor="#f7ab0a" />
         </h1>
 
-        <div className="pt-5">
+        {/* <div className="pt-5">
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>
@@ -41,7 +41,10 @@ const Hero = (props: Props) => {
           <Link href="#projects">
             <button className="heroButton">Projects</button>
           </Link>
-        </div>
+          <Link href="#contact">
+            <button className="heroButton">Contact Me</button>
+          </Link>
+        </div> */}
       </div>
     </div>
   );

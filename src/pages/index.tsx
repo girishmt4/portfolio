@@ -45,11 +45,30 @@ export default function Home() {
         <ContactMe />
       </section>
 
-      <Link href="#hero">
-        <footer className="sticky bottom-5 w-full cursor-pointer">
-          <div className="flex items-center justify-center">Home</div>
-        </footer>
-      </Link>
+      {/* <Link href="#hero"> */}
+      <footer className="sticky bottom-5 w-full cursor-pointer">
+        <div className="flex items-center justify-center">
+          <Link href="#hero">
+            <button className="heroButton">Home</button>
+          </Link>
+          <Link href="#about">
+            <button className="heroButton">About</button>
+          </Link>
+          <Link href="#experience">
+            <button className="heroButton">Experience</button>
+          </Link>
+          <Link href="#skills">
+            <button className="heroButton">Skills</button>
+          </Link>
+          <Link href="#projects">
+            <button className="heroButton">Projects</button>
+          </Link>
+          <Link href="#contact">
+            <button className="heroButton">Contact Me</button>
+          </Link>
+        </div>
+      </footer>
+      {/* </Link> */}
     </div>
   );
 }
