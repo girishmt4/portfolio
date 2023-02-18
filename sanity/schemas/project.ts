@@ -11,14 +11,14 @@ export default defineType({
       description: 'Title of the Project',
       type: 'string',
     },
-    {
-      name: 'image',
-      title: 'Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    },
+    // {
+    //   name: 'image',
+    //   title: 'Image',
+    //   type: 'image',
+    //   options: {
+    //     hotspot: true,
+    //   },
+    // },
     {
       name: 'summary',
       title: 'Summary',

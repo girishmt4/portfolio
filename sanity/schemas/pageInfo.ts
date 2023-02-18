@@ -41,11 +41,11 @@ export default defineType({
       title: 'Email',
       type: 'string',
     },
-    {
-      name: 'address',
-      title: 'Address',
-      type: 'string',
-    },
+    // {
+    //   name: 'address',
+    //   title: 'Address',
+    //   type: 'string',
+    // },
     {
       name: 'socials',
       title: 'Socials',
