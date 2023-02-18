@@ -1,11 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Experience } from "typings";
 
-type Props = {};
+type Props = {
+  experience: Experience;
+};
 
-function ExperienceCard({}: Props) {
+function ExperienceCard({ experience }: Props) {
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden">
+    <article className="flex flex-col rounded-lg items-center text-center justify-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden ">
       <motion.img
         initial={{
           y: -100,
@@ -26,24 +29,33 @@ function ExperienceCard({}: Props) {
       />
 
       <div className="space-y-7 px-0 md:px-10">
-        <h4 className="text-4xl font-light">Full Stack Developer</h4>
-        <p className="text-2xl font-bold mt-1">Data Strategies Interchange</p>
-        <div className="flex flex-row space-x-2 my-2">
+        <h4 className="text-4xl font-light">{experience.jobTitle}</h4>
+        <p className="text-2xl font-bold mt-1">{experience.company}</p>
+        <div className="flex flex-row space-x-2 my-2 items-center justify-center">
           {/* Tech Used */}
-          <motion.img
-            className="h-10 w-10 rounded-full"
-            src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Javascript_Logo.png"
-            alt=""
-          />
+          {experience.technologies.map((technology) => (
+            <motion.img
+              key={technology._id}
+              className="h-10 w-10 rounded-full"
+              src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Javascript_Logo.png"
+              alt=""
+            />
+          ))}
+
           {/* Tech Used */}
           {/* Tech Used */}
         </div>
-        <p className="py-5 text-gray-300">Start - End</p>
-        <ul className="list-disc space-y-2 ml-5 text-lg">
+        <p className="py-5 text-gray-300">{`From ${experience.dateStarted} to ${
+          experience.isCurrentlyWorkingHere ? "Present" : experience.dateEnded
+        }`}</p>
+        <ul className="list-disc space-y-2 ml-5 text-lg pr-5 max-h-32 overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#f7ab0a]/80">
+          {experience.points.map((point, i) => (
+            <li key={i}>{point}</li>
+          ))}
+          {/* <li>Summary Points</li>
           <li>Summary Points</li>
           <li>Summary Points</li>
-          <li>Summary Points</li>
-          <li>Summary Points</li>
+          <li>Summary Points</li> */}
         </ul>
       </div>
     </article>
