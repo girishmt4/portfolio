@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Experience } from "typings";
+import { urlFor } from "../../sanity";
 
 type Props = {
   experience: Experience;
@@ -32,18 +33,19 @@ function ExperienceCard({ experience }: Props) {
         <h4 className="text-4xl font-light">{experience.jobTitle}</h4>
         <p className="text-2xl font-bold mt-1">{experience.company}</p>
         <div className="flex flex-row space-x-2 my-2 items-center justify-center">
-          {/* Tech Used */}
           {experience.technologies.map((technology) => (
-            <motion.img
+            <div
               key={technology._id}
-              className="h-10 w-10 rounded-full"
-              src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Javascript_Logo.png"
-              alt=""
-            />
+              className="relative rounded-full object-fill w-14 h-14  filter group-hover:grayscale transition duration-100 ease-in-out bg-[white] flex flex-col items-center justify-center"
+            >
+              <motion.img
+                key={technology._id}
+                className="h-10 w-10"
+                src={urlFor(technology?.image).url()}
+                alt=""
+              />
+            </div>
           ))}
-
-          {/* Tech Used */}
-          {/* Tech Used */}
         </div>
         <p className="py-5 text-gray-300">{`From ${experience.dateStarted} to ${
           experience.isCurrentlyWorkingHere ? "Present" : experience.dateEnded
@@ -52,10 +54,6 @@ function ExperienceCard({ experience }: Props) {
           {experience.points.map((point, i) => (
             <li key={i}>{point}</li>
           ))}
-          {/* <li>Summary Points</li>
-          <li>Summary Points</li>
-          <li>Summary Points</li>
-          <li>Summary Points</li> */}
         </ul>
       </div>
     </article>

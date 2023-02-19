@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Project } from "typings";
+import { urlFor } from "../../sanity";
 
 type Props = {
   projects: Project[];
@@ -49,12 +50,21 @@ const Projects = ({ projects }: Props) => {
               <div className="flex flex-row space-x-2 my-2 items-center justify-center">
                 {/* Tech Used */}
                 {project.technologies.map((technology) => (
-                  <motion.img
+                  <div
                     key={technology._id}
-                    className="h-10 w-10 rounded-full"
-                    src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Javascript_Logo.png"
-                    alt=""
-                  />
+                    className="relative rounded-full object-fill w-14 h-14  filter group-hover:grayscale transition duration-100 ease-in-out bg-[white] flex flex-col items-center justify-center"
+                  >
+                    <motion.img
+                      src={urlFor(technology?.image).url()}
+                      className=" absolute object-fill w-12 h-12 p-1"
+                    />
+                  </div>
+                  // <motion.img
+                  //   key={technology._id}
+                  //   className="h-10 w-10 rounded-full"
+                  //   src={urlFor(technology?.image).url()}
+                  //   alt=""
+                  // />
                 ))}
 
                 {/* Tech Used */}

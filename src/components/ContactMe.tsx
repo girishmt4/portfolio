@@ -1,5 +1,5 @@
 import React from "react";
-import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
+// import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import { SubmitHandler, useForm } from "react-hook-form";
 
 type Props = {};
@@ -23,22 +23,22 @@ const ContactMe = (props: Props) => {
         Contact
       </h3>
       <div className="flex flex-col space-y-10">
-        <h4 className="text-4xl font-semibold text-center">Lets Talk</h4>
+        <h4 className="text-4xl font-semibold text-center">Lets Talk...</h4>
         <div className="space-y-10">
-          <div className="flex items-center space-x-5 justify-center">
+          {/* <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#f7ab0a] h-7 w-7 animate-pulse" />
             <p className="text-2xl">+1234567890</p>
-          </div>
+          </div> */}
 
           {/* <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-[#f7ab0a] h-7 w-7 animate-pulse" />
             <p className="text-2xl">Fresno, CA</p>
           </div> */}
 
-          <div className="flex items-center space-x-5 justify-center">
+          {/* <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-[#f7ab0a] h-7 w-7 animate-pulse" />
             <p className="text-2xl">gmtiwale@gmail.com</p>
-          </div>
+          </div> */}
         </div>
 
         <form
