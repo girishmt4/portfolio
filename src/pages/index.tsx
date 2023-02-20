@@ -60,7 +60,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
       </section>
 
       {/* <Link href="#hero"> */}
-      <footer className="sticky bottom-5 w-full cursor-pointer">
+      {/* <footer className="sticky bottom-5 w-full cursor-pointer">
         <div className="flex items-center justify-center">
           <Link href="#hero">
             <button className="heroButton">Home</button>
@@ -81,7 +81,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
             <button className="heroButton">Contact Me</button>
           </Link>
         </div>
-      </footer>
+      </footer> */}
       {/* </Link> */}
     </div>
   );

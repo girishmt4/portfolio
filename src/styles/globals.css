@@ -4,7 +4,13 @@
 
 @layer components {
     .heroButton {
-        @apply px-6 py-2 mx-8 border border-[#242424] rounded-full uppercase text-sm tracking-widest text-gray-500 transition-all border-[#f7ab0a]/40 text-[#f7ab0a]/40
+        @apply px-2 py-2 mx-2 border border-[#242424] rounded-full uppercase text-sm tracking-widest text-gray-500 transition-all border-[#f7ab0a]/40 text-[#f7ab0a]/40
+    }
+
+    .navButton {
+        @apply px-2 py-2 mx-2 uppercase text-base tracking-widest text-[gray] 
+        /* hover:border hover:rounded-full hover:border-[#f7ab0a]/40  */
+        hover:text-[#f7ab0a]/40
     }
 
     .contactInput {

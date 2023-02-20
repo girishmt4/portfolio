@@ -19,9 +19,9 @@ const About = ({ pageInfo }: Props) => {
       whileInView={{
         opacity: 1,
       }}
-      className="flex flex-col relative h-screen text-center md:text-center md:flex-row max-w-7xl px-10 justify-center mx-auto items-center"
+      className="flex flex-col relative h-screen text-center md:text-center lg:flex-row max-w-7xl px-10 justify-center mx-auto items-center"
     >
-      <h3 className="absolute top-24 uppercase tracking-[1rem] text-gray-500 text-2xl text-center">
+      <h3 className="absolute top-16 sm:top-24 uppercase tracking-[1rem] text-gray-500 text-2xl text-center">
         About
       </h3>
       <motion.img
@@ -39,7 +39,7 @@ const About = ({ pageInfo }: Props) => {
         viewport={{
           once: true,
         }}
-        className="mb-10 md:mb-0 flex-shrink-0 rounded-full h-40 w-40 mx-auto object-cover md:w-64 md:h-64 xl:w-[20rem] xl:h-[20rem]"
+        className="mb-10 lg:mb-0 flex-shrink-0 rounded-full h-32 w-32 mx-auto object-cover md:w-64 md:h-64 xl:w-[20rem] xl:h-[20rem]"
         src={urlFor(pageInfo?.profilePic).url()}
         alt=""
       />
@@ -58,12 +58,14 @@ const About = ({ pageInfo }: Props) => {
         // viewport={{
         //   once: true,
         // }}
-        className="space-y-10 px-0 md:px-10"
+        className="space-y-10 px-0 md:px-10 max-h-48"
       >
-        <h4 className="text-4xl font-semibold">
+        {/* <h4 className="text-4xl font-semibold">
           Here is a little background..{" "}
-        </h4>
-        <p className="text-sm">{pageInfo?.backgroundInformation}</p>
+        </h4> */}
+        <p className="text-sm max-h-48 overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#f7ab0a]/80 pr-3">
+          {pageInfo?.backgroundInformation}
+        </p>
       </motion.div>
     </motion.div>
   );

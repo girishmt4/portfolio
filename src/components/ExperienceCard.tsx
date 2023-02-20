@@ -25,8 +25,8 @@ function ExperienceCard({ experience }: Props) {
         viewport={{
           once: true,
         }}
-        className="h-32 w-32 rounded-full object-cover object-center"
-        src="https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+        className="h-32 w-32 rounded-full object-contain object-center"
+        src={urlFor(experience?.companyImage).url()}
       />
 
       <div className="space-y-7 px-0 md:px-10">
