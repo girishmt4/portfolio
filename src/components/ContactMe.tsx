@@ -19,10 +19,10 @@ const ContactMe = (props: Props) => {
   };
   return (
     <div className="h-screen relative flex flex-col text-center md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
-      <h3 className="absolute top-24 uppercase tracking-[1rem] text-gray-500 text-2xl ">
+      <h3 className="absolute top-20 lg:top-24 uppercase tracking-[1rem] text-gray-500 text-2xl ">
         Contact
       </h3>
-      <div className="flex flex-col space-y-10">
+      <div className="flex flex-col space-y-10 mt-20">
         <h4 className="text-4xl font-semibold text-center">Lets Talk...</h4>
         <div className="space-y-10">
           {/* <div className="flex items-center space-x-5 justify-center">
@@ -42,10 +42,10 @@ const ContactMe = (props: Props) => {
         </div>
 
         <form
-          className="flex flex-col space-y-2 w-fit mx-auto"
+          className="flex flex-col space-y-4 w-fit mx-auto text-center justify-center items-center"
           onSubmit={handleSubmit(onSubmit)}
         >
-          <div className="flex space-x-2">
+          <div className="flex flex-col space-y-4 w-full md:space-y-0 md:flex-row md:space-x-2">
             <input
               {...register("name")}
               placeholder="Full Name"
@@ -62,18 +62,19 @@ const ContactMe = (props: Props) => {
           <input
             {...register("subject")}
             placeholder="Subject"
-            className="contactInput"
+            className="contactInput w-full"
             type="text"
           />
 
           <textarea
             {...register("message")}
             placeholder="Message"
-            className="contactInput"
+            className="contactInput w-full"
+            rows={5}
           />
           <button
             type="submit"
-            className="bg-[#f7ab0a] py-5 px-10 rounded-md text-black font-bold text-lg"
+            className="bg-[#f7ab0a] py-2 px-10 rounded-md text-black font-bold text-lg w-4/6  flex items-center justify-center text-center"
           >
             Submit
           </button>

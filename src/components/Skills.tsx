@@ -9,8 +9,8 @@ type Props = {
 
 const Skills = ({ skills }: Props) => {
   return (
-    <div className="h-screen flex relative flex-col text-center xl:flex-row max-w-[2000px] justify-center xl:space-y-0 mx-auto items-center">
-      <h3 className="absolute top-24 uppercase tracking-[1rem] text-gray-500 text-2xl xl:px-10 ">
+    <div className="h-screen flex relative flex-col text-center xl:flex-row max-w-[2000px] justify-center  mx-auto items-center lg:mx-20 xl:mx-24 2xl:mx-32">
+      <h3 className="absolute top-20 lg:top-24 uppercase tracking-[1rem] text-gray-500 text-2xl xl:px-10 ">
         Skills
       </h3>
       <motion.div
@@ -28,7 +28,7 @@ const Skills = ({ skills }: Props) => {
         // viewport={{
         //   once: true,
         // }}
-        className="grid grid-cols-7 gap-4 h-120 overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#f7ab0a]/80"
+        className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 xl:grid-cols-8 mt-20 md:px-5 gap-4 h-4/6 place-items-center pr-2"
       >
         {skills?.map((skill) => (
           <Skill key={skill._id} skill={skill} />

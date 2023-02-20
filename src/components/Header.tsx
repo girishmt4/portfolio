@@ -13,7 +13,7 @@ export default function Header({ socials }: Props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className=" md:flex md:items-center md:justify-between sticky top-0 p-5 items-center justify-between w-screen z-20">
+    <header className=" lg:flex lg:items-center lg:justify-between sticky top-0 p-5 items-center justify-between w-screen z-30">
       <motion.div
         initial={{
           x: -500,
@@ -44,7 +44,7 @@ export default function Header({ socials }: Props) {
         </div>
 
         <div
-          className="text-[#f7ab0a] h-10 w-10 mx-4 cursor-pointer md:hidden block"
+          className="text-[#f7ab0a] h-10 w-10 mx-4 cursor-pointer lg:hidden block"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <XMarkIcon /> : <Bars3Icon />}
@@ -52,36 +52,36 @@ export default function Header({ socials }: Props) {
       </motion.div>
 
       <ul
-        className={`md:flex md:items-center absolute bg-[rgb(36,36,36)] w-full left-0 z-[-1] md:z-auto md:static md:w-auto py-4 md:py-0 pl-6 md:pl-0 transition-all ease-in duration-500 ${
+        className={`lg:flex lg:items-center absolute bg-[rgb(36,36,36)] w-full left-0 lg:z-auto lg:static lg:w-auto py-4 lg:py-0 pl-6 lg:pl-0 transition-all ease-in duration-500 z-30 ${
           isMenuOpen ? "top-20" : "top-[-490px]"
         }`}
       >
-        <li className="mx-2 my-2 md:my-0">
+        <li className="mx-2 my-2 lg:my-0">
           <Link href="#hero" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <button className="navButton">Home</button>
           </Link>
         </li>
-        <li className="mx-2 my-2 md:my-0">
+        <li className="mx-2 my-2 lg:my-0">
           <Link href="#about" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <button className="navButton">About</button>
           </Link>
         </li>
-        <li className="mx-2 my-2 md:my-0">
+        <li className="mx-2 my-2 lg:my-0">
           <Link href="#experience" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <button className="navButton">Experience</button>
           </Link>
         </li>
-        <li className="mx-2 my-2 md:my-0">
+        <li className="mx-2 my-2 lg:my-0">
           <Link href="#skills" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <button className="navButton">Skills</button>
           </Link>
         </li>
-        <li className="mx-2 my-2 md:my-0">
+        <li className="mx-2 my-2 lg:my-0">
           <Link href="#projects" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <button className="navButton">Projects</button>
           </Link>
         </li>
-        <li className="mx-2 my-2 md:my-0">
+        <li className="mx-2 my-2 lg:my-0">
           <Link href="#contact" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <button className="navButton">Contact</button>
           </Link>
@@ -112,7 +112,7 @@ export default function Header({ socials }: Props) {
           fgColor="gray"
           bgColor="transparent"
         />
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+        <p className="uppercase hidden lg:inline-flex text-sm text-gray-400">
           Get in Touch
         </p>
       </div> */}
