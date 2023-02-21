@@ -23,7 +23,6 @@ const ContactMe = (props: Props) => {
         Contact
       </h3>
       <div className="flex flex-col space-y-10 mt-20">
-        <h4 className="text-4xl font-semibold text-center">Lets Talk...</h4>
         <div className="space-y-10">
           {/* <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#f7ab0a] h-7 w-7 animate-pulse" />
@@ -45,6 +44,9 @@ const ContactMe = (props: Props) => {
           className="flex flex-col space-y-4 w-fit mx-auto text-center justify-center items-center"
           onSubmit={handleSubmit(onSubmit)}
         >
+          <h4 className="text-4xl mb-5 font-semibold text-center text-[#f7ab0a] ">
+            Lets Talk...
+          </h4>
           <div className="flex flex-col space-y-4 w-full md:space-y-0 md:flex-row md:space-x-2">
             <input
               {...register("name")}
@@ -74,7 +76,7 @@ const ContactMe = (props: Props) => {
           />
           <button
             type="submit"
-            className="bg-[#f7ab0a] py-2 px-10 rounded-md text-black font-bold text-lg w-4/6  flex items-center justify-center text-center"
+            className="bg-[#f7ab0a] animate-pulse py-2 px-10 rounded-md text-black font-bold text-lg w-4/6  flex items-center justify-center text-center"
           >
             Submit
           </button>

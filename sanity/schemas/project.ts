@@ -22,7 +22,12 @@ export default defineType({
     {
       name: 'summary',
       title: 'Summary',
-      type: 'text',
+      type: 'array',
+      of: [
+        {
+          type: 'string',
+        },
+      ],
     },
     {
       name: 'technologies',

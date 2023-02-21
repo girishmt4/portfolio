@@ -10,7 +10,7 @@ type Props = {
 const Projects = ({ projects }: Props) => {
   // const projects = [1, 2, 3, 4, 5, 6];
   return (
-    <div className="h-screen relative flex overflow-hidden flex-col md:flex:row max-w-full justify-center items-center mx-auto z-0 px-5">
+    <div className="h-screen relative flex overflow-hidden flex-col md:flex:row max-w-full justify-center items-center mx-auto z-0 px-5 xl:px-20 2xl:px-32 ">
       <h3 className="absolute top-20 lg:top-24 uppercase tracking-[1rem] text-gray-500 text-2xl ">
         Projects
       </h3>
@@ -21,7 +21,7 @@ const Projects = ({ projects }: Props) => {
       >
         {projects.map((project) => (
           <div
-            className="flex flex-col rounded-lg items-center text-center justify-center space-y-7 flex-shrink-0 w-full sm:w-5/6 md:w-2/3 xl:w-3/5 2xl:w-1/2 snap-center bg-[#292929] opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden"
+            className="flex flex-col rounded-lg items-center text-center justify-center space-y-7 flex-shrink-0 w-full sm:w-5/6 md:w-2/3 xl:w-3/5  snap-center bg-[#292929]  cursor-pointer transition-opacity duration-200 overflow-hidden"
             // className="flex flex-col rounded-lg items-center text-center justify-center flex-shrink-0 w-full sm:w-5/6 md:w-2/3  snap-center bg-[#292929] opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden
             // " text-center justify-center "
             // className="w-[500px] md:w-[600px] xl:w-[900px] rounded-lg flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden"
@@ -75,10 +75,12 @@ const Projects = ({ projects }: Props) => {
                 {/* Tech Used */}
                 {/* Tech Used */}
               </div>
-              <p className="space-y-2 py-4 text-sm lg:text-base px-6 max-h-44  overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#f7ab0a]/80">
-                {/* space-y-2 py-4 text-sm lg:text-base px-6 max-h-44  overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#f7ab0a]/80 */}
-                {project.summary}
-              </p>
+
+              <ul className=" space-y-2 py-4 text-sm lg:text-base px-6 max-h-44  overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#f7ab0a]/80">
+                {project.summary.map((point, i) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
             </div>
           </div>
         ))}

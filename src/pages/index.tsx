@@ -27,7 +27,7 @@ type Props = {
 const inter = Inter({ subsets: ["latin"] });
 const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]">
+    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a] scroll-smooth">
       <Head>
         <title>Girish Tiwale</title>
         {/* <link rel="icon" href="/favicon.ico" /> */}

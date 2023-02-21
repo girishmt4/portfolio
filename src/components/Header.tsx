@@ -13,7 +13,7 @@ export default function Header({ socials }: Props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className=" lg:flex lg:items-center lg:justify-between sticky top-0 p-5 items-center justify-between w-screen z-30">
+    <header className=" lg:flex lg:items-center border-b border-[#f7ab0a]/40 bg-[rgb(28,28,28)] lg:justify-between sticky top-0 p-0 items-center justify-between w-screen z-30">
       <motion.div
         initial={{
           x: -500,
@@ -29,7 +29,7 @@ export default function Header({ socials }: Props) {
           duration: 1,
         }}
         viewport={{ once: true }}
-        className="flex flex-row items-center justify-between"
+        className="flex flex-row items-center justify-between bg-[rgb(28,28,28)]"
       >
         {/* SOcial Icons */}
         <div className="flex flex-row items-center justify-between">
@@ -52,8 +52,8 @@ export default function Header({ socials }: Props) {
       </motion.div>
 
       <ul
-        className={`lg:flex lg:items-center absolute bg-[rgb(36,36,36)] w-full left-0 lg:z-auto lg:static lg:w-auto py-4 lg:py-0 pl-6 lg:pl-0 transition-all ease-in duration-500 z-30 ${
-          isMenuOpen ? "top-20" : "top-[-490px]"
+        className={`lg:flex lg:items-center absolute bg-[rgb(28,28,28)] w-full left-0 z-[-30] lg:z-auto lg:static lg:w-auto py-4 lg:py-0 pl-6 lg:pl-0 transition-all ease-in duration-500 border-b lg:border-none border-[#f7ab0a]/40 ${
+          isMenuOpen ? "top-10" : "top-[-490px]"
         }`}
       >
         <li className="mx-2 my-2 lg:my-0">
