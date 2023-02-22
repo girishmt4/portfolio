@@ -35,7 +35,9 @@ function Skill({ skill }: Props) {
 
       <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-[black]  w-16 h-16 sm:h-20 sm:w-20 md:h-24 md:w-24 xl:w-28 xl:h-28 rounded-full z-0">
         <div className="flex items-center justify-center h-full ">
-          <p className="text-white opacity-100">{skill.title}</p>
+          <p className="text-xs md:text-base xl:text-lg text-white opacity-100">
+            {skill.title}
+          </p>
         </div>
       </div>
     </div>
