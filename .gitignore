@@ -45,7 +45,7 @@ next-env.d.ts
 
 
 # Dependencies
-/sanity/node_modules
+/sanity/node_modules (Selective Sync Conflict)
 /sanity/.pnp
 /sanity/.pnp.js
 
