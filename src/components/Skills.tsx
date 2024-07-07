@@ -14,17 +14,17 @@ const Skills = ({ skills }: Props) => {
         Skills
       </h3>
       <motion.div
-        // initial={{
-        //   x: 200,
-        //   opacity: 0,
-        // }}
-        // whileInView={{
-        //   opacity: 1,
-        //   x: 0,
-        // }}
-        // transition={{
-        //   duration: 0.5,
-        // }}
+        initial={{
+          x: 200,
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+        }}
+        transition={{
+          duration: 0.5,
+        }}
         // viewport={{
         //   once: true,
         // }}

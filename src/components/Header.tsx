@@ -26,7 +26,7 @@ export default function Header({ socials }: Props) {
           scale: 1,
         }}
         transition={{
-          duration: 1,
+          duration: 0.5,
         }}
         viewport={{ once: true }}
         className="flex flex-row items-center justify-between bg-[rgb(28,28,28)]"
@@ -51,7 +51,27 @@ export default function Header({ socials }: Props) {
         </div>
       </motion.div>
 
-      <ul
+      <motion.ul
+        initial={{
+          x: 1000,
+          opacity: 0,
+          // scale: 0.5,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+          // scale: 1,
+        }}
+        transition={{
+          duration: 0.5,
+        }}
+        // animate={{
+        //   x: isMenuOpen ? 0 : 500,
+        //   opacity: isMenuOpen ? 1 : 0,
+        //   scale: isMenuOpen ? 1 : 0.5,
+        // }}
+
+        viewport={{ once: true }}
         className={`lg:flex lg:items-center absolute bg-[rgb(28,28,28)] w-full left-0 z-[-30] lg:z-auto lg:static lg:w-auto py-4 lg:py-0 pl-6 lg:pl-0 transition-all ease-in duration-500 border-b lg:border-none border-[#f7ab0a]/40 ${
           isMenuOpen ? "top-10" : "top-[-490px]"
         }`}
@@ -86,7 +106,7 @@ export default function Header({ socials }: Props) {
             <button className="navButton">Contact</button>
           </Link>
         </li>
-      </ul>
+      </motion.ul>
 
       {/* <Link href="#contact"> */}
       {/* <div

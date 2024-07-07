@@ -36,25 +36,25 @@ const About = ({ pageInfo }: Props) => {
           x: 0,
           opacity: 1,
         }}
-        viewport={{
-          once: true,
-        }}
+        // viewport={{
+        //   once: true,
+        // }}
         className="mt-16 mb-6 lg:my-0 flex-shrink-0 rounded-full h-32 w-32 sm:h-48 sm:w-48 mx-auto object-cover lg:w-64 lg:h-64 md:mt-24 xl:w-[20rem] xl:h-[20rem] 2xl:w-[24rem] 2xl:h-[24rem]"
         src={urlFor(pageInfo?.profilePic).url()}
         alt=""
       />
       <motion.div
-        // initial={{
-        //   x: 500,
-        //   opacity: 0,
-        // }}
-        // transition={{
-        //   duration: 1.2,
-        // }}
-        // whileInView={{
-        //   x: 0,
-        //   opacity: 1,
-        // }}
+        initial={{
+          x: 500,
+          opacity: 0,
+        }}
+        transition={{
+          duration: 1.2,
+        }}
+        whileInView={{
+          x: 0,
+          opacity: 1,
+        }}
         // viewport={{
         //   once: true,
         // }}

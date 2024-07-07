@@ -4,7 +4,7 @@ import { Skill } from "typings";
 import { urlFor } from "../../lib/sanity";
 
 type Props = {
-  // directionLeft: boolean;
+  directionLeft?: boolean;
   skill: Skill;
 };
 
@@ -13,17 +13,21 @@ function Skill({ skill }: Props) {
     <div className="group relative flex cursor-pointer">
       <div className="relative rounded-full object-fill p-5 w-16 h-16 sm:h-20 sm:w-20 md:h-24 md:w-24 xl:w-28 xl:h-28 filter group-hover:grayscale transition duration-100 ease-in-out bg-[white] flex flex-col items-center content-center justify-center">
         <motion.img
-          // initial={{
-          //   x: directionLeft ? -200 : 200,
-          //   opacity: 0,
-          // }}
-          // whileInView={{
-          //   opacity: 1,
-          //   x: 0,
-          // }}
-          // transition={{
-          //   duration: 0.5,
-          // }}
+          initial={{
+            // x: directionLeft ? -200 : 200,
+            x: 200,
+            opacity: 0,
+          }}
+          // whileHover={{ scale: 1.1 }}
+          // whileFocus={{ scale: 1.1 }}
+          // whileTap={{ scale: 0.9 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+          }}
+          transition={{
+            duration: 0.5,
+          }}
           // viewport={{
           //   once: true,
           // }}

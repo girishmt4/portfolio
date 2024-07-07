@@ -19,7 +19,7 @@ const WorkExperience = ({ experiences }: Props) => {
       transition={{
         duration: 1.5,
       }}
-      viewport={{ once: true }}
+      // viewport={{ once: true }}
       className="h-screen flex flex-col relative overflow-hidden text-left 
       md:flex-row 
       max-w-full px-5 xl:px-20 2xl:px-32 justify-center mx-auto items-center "

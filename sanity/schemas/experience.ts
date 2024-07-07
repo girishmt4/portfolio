@@ -24,6 +24,11 @@ export default defineType({
       type: 'text',
     },
     {
+      name: 'location',
+      title: 'Location',
+      type: 'string',
+    },
+    {
       name: 'dateStarted',
       title: 'DateStarted',
       type: 'date',
