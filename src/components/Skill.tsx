@@ -15,7 +15,7 @@ function Skill({ skill }: Props) {
         <motion.img
           initial={{
             // x: directionLeft ? -200 : 200,
-            x: 200,
+            x: 50,
             opacity: 0,
           }}
           // whileHover={{ scale: 1.1 }}

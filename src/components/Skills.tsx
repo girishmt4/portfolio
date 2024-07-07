@@ -15,7 +15,7 @@ const Skills = ({ skills }: Props) => {
       </h3>
       <motion.div
         initial={{
-          x: 200,
+          x: 50,
           opacity: 0,
         }}
         whileInView={{

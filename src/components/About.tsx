@@ -44,17 +44,17 @@ const About = ({ pageInfo }: Props) => {
         alt=""
       />
       <motion.div
-        initial={{
-          x: 500,
-          opacity: 0,
-        }}
-        transition={{
-          duration: 1.2,
-        }}
-        whileInView={{
-          x: 0,
-          opacity: 1,
-        }}
+        // initial={{
+        //   x: 500,
+        //   opacity: 0,
+        // }}
+        // transition={{
+        //   duration: 1.2,
+        // }}
+        // whileInView={{
+        //   x: 0,
+        //   opacity: 1,
+        // }}
         // viewport={{
         //   once: true,
         // }}
