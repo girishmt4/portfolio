@@ -5,6 +5,11 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+        <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
       </Head>
       <body>
