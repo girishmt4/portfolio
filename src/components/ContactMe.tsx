@@ -92,7 +92,7 @@ const ContactMe = (props: Props) => {
           />
           <button
             type="submit"
-            className="bg-[#1976d2] animate-pulse py-2 px-10 rounded-md text-black font-bold text-lg w-4/6  flex items-center justify-center text-center"
+            className="bg-[#1976d2] animate-pulse py-2 px-10 rounded-md text-white font-bold text-lg w-4/6  flex items-center justify-center text-center"
             style={{
               backgroundColor: "var(--color-primary)",
             }}

@@ -37,7 +37,7 @@ export default function Header({ socials }: Props) {
             <SocialIcon
               key={social._id}
               url={social.linkToProfile}
-              fgColor="var(--color-contrast)"
+              fgColor="#ffffff"
               bgColor="transparent"
             />
           ))}
@@ -48,9 +48,9 @@ export default function Header({ socials }: Props) {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? (
-            <XMarkIcon color="var(--color-contrast)" />
+            <XMarkIcon color="#ffffff" />
           ) : (
-            <Bars3Icon color="var(--color-contrast)" />
+            <Bars3Icon color="#ffffff" />
           )}
         </div>
       </motion.div>
@@ -77,6 +77,7 @@ export default function Header({ socials }: Props) {
 
         viewport={{ once: true }}
         className={`lg:flex lg:items-center absolute navBar w-full left-0 z-[-30] lg:z-auto lg:static lg:w-auto py-4 lg:py-0 pl-6 lg:pl-0 
+          transition-all ease-in duration-500
           border-b lg:border-none ${isMenuOpen ? "top-10" : "top-[-490px]"}`}
       >
         <li className="mx-2 my-2 lg:my-0">

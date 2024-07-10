@@ -17,7 +17,7 @@ function Skill({ skill }: Props) {
   return (
     <div className="group relative flex cursor-pointer">
       <div
-        className="relative rounded-full object-fill p-5 w-16 h-16 sm:h-20 sm:w-20 md:h-24 md:w-24 xl:w-28 xl:h-28 filter group-hover:grayscale transition duration-100 ease-in-out flex flex-col items-center content-center justify-center"
+        className="relative rounded-full object-fill p-3 sm:p-4 md:p-5 w-16 h-16 sm:h-20 sm:w-20 md:h-24 md:w-24 xl:w-28 xl:h-28 filter group-hover:grayscale transition duration-100 ease-in-out flex flex-col items-center content-center justify-center"
         style={{ backgroundColor: backgroundColor }}
       >
         <motion.img

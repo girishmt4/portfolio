@@ -38,7 +38,7 @@ const Skills = ({ skills }: Props) => {
         // viewport={{
         //   once: true,
         // }}
-        className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 xl:grid-cols-8 mt-20 md:px-5 gap-4 h-4/6 place-items-center pr-2"
+        className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 mt-20 md:px-5 gap-4 h-4/6 place-items-center pr-2"
       >
         {skills?.map((skill) => (
           <Skill key={skill._id} skill={skill} />

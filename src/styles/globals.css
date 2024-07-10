@@ -10,11 +10,11 @@
 
     .navButton {
         @apply px-2 py-2 mx-2 uppercase text-base tracking-widest font-bold;
-        color: var(--color-contrast);
+        color: #ffffff;
     }
 
     .navButton:hover {
-        color: var(--color-bg);
+        color: #121212;
     }
 
     .contactInput {
@@ -66,7 +66,8 @@
     --color-text: #000000;
     --color-border: #d1d5db;
     --color-shade: #f0f0f0;
-    --color-primary: #1976d2;
+    /* --color-primary: #1976d2; */
+    --color-primary: #0e3155
 }
 
 .dark {
