@@ -2,17 +2,24 @@ import React from "react";
 import { motion } from "framer-motion";
 import Skill from "./Skill";
 import { Skill as SkillType } from "typings";
+import { useTheme } from "@/context/ThemeContext";
 
 type Props = {
   skills: SkillType[];
 };
 
 const Skills = ({ skills }: Props) => {
+  const { theme } = useTheme();
+
   return (
     <div className="h-screen flex relative flex-col text-center xl:flex-row justify-center  mx-auto items-center lg:mx-20 xl:mx-24 2xl:mx-32">
       <h3
         className="absolute top-20 lg:top-24 uppercase tracking-[1rem] text-gray-500 text-2xl xl:px-10 font-bold"
-        style={{ color: "#1976d2" }}
+        style={{
+          color: "var(--color-primary)",
+          textShadow:
+            theme === "dark" ? "1px 1px 5px var(--color-contrast)" : "",
+        }}
       >
         Skills
       </h3>

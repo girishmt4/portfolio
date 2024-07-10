@@ -18,7 +18,11 @@ const Projects = ({ projects }: Props) => {
     <div className="h-screen relative flex overflow-hidden flex-col md:flex:row max-w-full justify-center items-center mx-auto z-0 px-5 xl:px-20 2xl:px-32 ">
       <h3
         className="absolute top-20 lg:top-24 uppercase tracking-[1rem] text-gray-500 text-2xl font-bold"
-        style={{ color: "#1976d2" }}
+        style={{
+          color: "var(--color-primary)",
+          textShadow:
+            theme === "dark" ? "1px 1px 5px var(--color-contrast)" : "",
+        }}
       >
         Projects
       </h3>

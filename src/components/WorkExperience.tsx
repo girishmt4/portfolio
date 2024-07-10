@@ -2,12 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import ExperienceCard from "./ExperienceCard";
 import { Experience } from "typings";
+import { useTheme } from "@/context/ThemeContext";
 
 type Props = {
   experiences: Experience[];
 };
 
 const WorkExperience = ({ experiences }: Props) => {
+  const { theme } = useTheme();
+
   return (
     <motion.div
       initial={{
@@ -26,7 +29,11 @@ const WorkExperience = ({ experiences }: Props) => {
     >
       <h3
         className="absolute top-20 lg:top-24 uppercase tracking-[1rem] text-gray-500 text-2xl font-bold"
-        style={{ color: "#1976d2" }}
+        style={{
+          color: "var(--color-primary)",
+          textShadow:
+            theme === "dark" ? "1px 1px 5px var(--color-contrast)" : "",
+        }}
       >
         Experience
       </h3>

@@ -13,7 +13,7 @@ export default function Header({ socials }: Props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className=" lg:flex lg:items-center border-b border-[#1976d2]/40 bg-[#0e3155] lg:justify-between sticky top-0 p-0 items-center justify-between w-screen z-30">
+    <header className=" lg:flex lg:items-center border-b border-[#1976d2]/40  lg:justify-between sticky top-0 p-0 items-center justify-between w-screen z-30">
       <motion.div
         initial={{
           x: -500,
@@ -29,15 +29,15 @@ export default function Header({ socials }: Props) {
           duration: 0.5,
         }}
         viewport={{ once: true }}
-        className="flex flex-row items-center justify-between bg-[#0e3155]"
+        className="flex flex-row items-center justify-between social-icons-div"
       >
         {/* SOcial Icons */}
-        <div className="flex flex-row items-center justify-between">
+        <div className="flex flex-row items-center justify-between ">
           {socials.map((social) => (
             <SocialIcon
               key={social._id}
               url={social.linkToProfile}
-              fgColor="var(--color-bg)"
+              fgColor="var(--color-contrast)"
               bgColor="transparent"
             />
           ))}
@@ -48,9 +48,9 @@ export default function Header({ socials }: Props) {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? (
-            <XMarkIcon color="var(--color-bg)" />
+            <XMarkIcon color="var(--color-contrast)" />
           ) : (
-            <Bars3Icon color="var(--color-bg)" />
+            <Bars3Icon color="var(--color-contrast)" />
           )}
         </div>
       </motion.div>
@@ -58,12 +58,12 @@ export default function Header({ socials }: Props) {
       <motion.ul
         initial={{
           x: 1000,
-          opacity: 0,
+          // opacity: 0,
           // scale: 0.5,
         }}
         animate={{
           x: 0,
-          opacity: 1,
+          // opacity: 1,
           // scale: 1,
         }}
         transition={{
@@ -76,9 +76,8 @@ export default function Header({ socials }: Props) {
         // }}
 
         viewport={{ once: true }}
-        className={`lg:flex lg:items-center absolute bg-[#0e3155] w-full left-0 z-[-30] lg:z-auto lg:static lg:w-auto py-4 lg:py-0 pl-6 lg:pl-0 transition-all ease-in duration-500 border-b lg:border-none border-[#1976d2]/40 ${
-          isMenuOpen ? "top-10" : "top-[-490px]"
-        }`}
+        className={`lg:flex lg:items-center absolute navBar w-full left-0 z-[-30] lg:z-auto lg:static lg:w-auto py-4 lg:py-0 pl-6 lg:pl-0 
+          border-b lg:border-none ${isMenuOpen ? "top-10" : "top-[-490px]"}`}
       >
         <li className="mx-2 my-2 lg:my-0">
           <Link href="#hero" onClick={() => setIsMenuOpen(!isMenuOpen)}>

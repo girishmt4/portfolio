@@ -2,12 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import { PageInfo } from "typings";
 import { urlFor } from "../../lib/sanity";
+import { useTheme } from "@/context/ThemeContext";
 
 type Props = {
   pageInfo: PageInfo;
 };
 
 const About = ({ pageInfo }: Props) => {
+  const { theme } = useTheme();
+
   return (
     <motion.div
       initial={{
@@ -23,7 +26,11 @@ const About = ({ pageInfo }: Props) => {
     >
       <h3
         className="absolute top-20 lg:top-24 uppercase tracking-[1rem] text-2xl text-center font-bold"
-        style={{ color: "#1976d2" }}
+        style={{
+          color: "var(--color-primary)",
+          textShadow:
+            theme === "dark" ? "1px 1px 5px var(--color-contrast)" : "",
+        }}
       >
         About
       </h3>

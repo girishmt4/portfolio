@@ -1,6 +1,7 @@
 import React from "react";
 // import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { useTheme } from "@/context/ThemeContext";
 
 type Props = {};
 
@@ -13,6 +14,7 @@ type Inputs = {
 
 const ContactMe = (props: Props) => {
   const { register, handleSubmit } = useForm<Inputs>();
+  const { theme } = useTheme();
 
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
     window.location.href = `mailto:gmtiwale@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
@@ -21,7 +23,11 @@ const ContactMe = (props: Props) => {
     <div className="h-screen relative flex flex-col text-center md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
       <h3
         className="absolute top-20 lg:top-24 uppercase tracking-[1rem] text-gray-500 text-2xl font-bold"
-        style={{ color: "#1976d2" }}
+        style={{
+          color: "var(--color-primary)",
+          textShadow:
+            theme === "dark" ? "1px 1px 5px var(--color-contrast)" : "",
+        }}
       >
         Contact Me
       </h3>
@@ -47,7 +53,14 @@ const ContactMe = (props: Props) => {
           className="flex flex-col space-y-4 w-fit mx-auto text-center justify-center items-center"
           onSubmit={handleSubmit(onSubmit)}
         >
-          <h4 className="text-4xl mb-5 font-semibold text-center text-[#1976d2] ">
+          <h4
+            className="text-4xl mb-5 font-semibold text-center"
+            style={{
+              color: "var(--color-primary)",
+              textShadow:
+                theme === "dark" ? "1px 1px 5px var(--color-contrast)" : "",
+            }}
+          >
             Lets Talk...
           </h4>
           <div className="flex flex-col space-y-4 w-full md:space-y-0 md:flex-row md:space-x-2">
@@ -80,6 +93,9 @@ const ContactMe = (props: Props) => {
           <button
             type="submit"
             className="bg-[#1976d2] animate-pulse py-2 px-10 rounded-md text-black font-bold text-lg w-4/6  flex items-center justify-center text-center"
+            style={{
+              backgroundColor: "var(--color-primary)",
+            }}
           >
             Submit
           </button>
