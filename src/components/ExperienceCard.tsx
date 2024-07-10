@@ -11,13 +11,10 @@ type Props = {
 function ExperienceCard({ experience }: Props) {
   const { theme } = useTheme();
 
-  const backgroundColor = theme === "dark" ? "#292929" : "#f0f0f0"; // Light mode color is set to a lighter shade
-  const blurColor = theme === "dark" ? "#121212" : "#ffffff";
-
   return (
     <article
       className="flex flex-col rounded-lg items-center text-center justify-center flex-shrink-0 w-full sm:w-5/6 md:w-2/3  snap-center cursor-pointer transition-opacity duration-200 overflow-hidden "
-      style={{ backgroundColor: backgroundColor }}
+      style={{ backgroundColor: "var(--color-shade)" }}
     >
       <motion.img
         initial={{
@@ -34,7 +31,7 @@ function ExperienceCard({ experience }: Props) {
         // viewport={{
         //   once: true,
         // }}
-        className="mb-5 rounded-full object-contain object-center"
+        className="mb-5 rounded-full object-contain object-center company-image"
         style={{ maxWidth: "16rem", height: "4rem" }}
         src={urlFor(experience?.companyImage).url()}
       />

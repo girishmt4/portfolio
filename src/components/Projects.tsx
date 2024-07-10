@@ -11,8 +11,6 @@ type Props = {
 const Projects = ({ projects }: Props) => {
   const { theme } = useTheme();
 
-  const backgroundColor = theme === "dark" ? "#292929" : "#f0f0f0"; // Light mode color is set to a lighter shade
-
   // const projects = [1, 2, 3, 4, 5, 6];
   return (
     <div className="h-screen relative flex overflow-hidden flex-col md:flex:row max-w-full justify-center items-center mx-auto z-0 px-5 xl:px-20 2xl:px-32 ">
@@ -33,12 +31,12 @@ const Projects = ({ projects }: Props) => {
       >
         {projects.map((project) => (
           <div
-            className="flex flex-col rounded-lg items-center text-center justify-center space-y-7 flex-shrink-0 w-full sm:w-5/6 md:w-2/3 xl:w-3/5  snap-center bg-[#292929]  cursor-pointer transition-opacity duration-200 overflow-hidden"
-            // className="flex flex-col rounded-lg items-center text-center justify-center flex-shrink-0 w-full sm:w-5/6 md:w-2/3  snap-center bg-[#292929] opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden
+            className="flex flex-col rounded-lg items-center text-center justify-center space-y-7 flex-shrink-0 w-full sm:w-5/6 md:w-2/3 xl:w-3/5  snap-center   cursor-pointer transition-opacity duration-200 overflow-hidden"
+            // className="flex flex-col rounded-lg items-center text-center justify-center flex-shrink-0 w-full sm:w-5/6 md:w-2/3  snap-center  opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden
             // " text-center justify-center "
             // className="w-[500px] md:w-[600px] xl:w-[900px] rounded-lg flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden"
             key={project._id}
-            style={{ backgroundColor: backgroundColor }}
+            style={{ backgroundColor: "var(--color-shade)" }}
           >
             <motion.img
               initial={{

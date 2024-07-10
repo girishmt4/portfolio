@@ -36,11 +36,26 @@ const BackgroundCircles = (props: Props) => {
       transition={{ duration: 2.5 }}
       className="relative flex justify-center items-center"
     >
-      <div className="absolute border border-[#333333] rounded-full h-[200px] w-[200px] top-10 left-10 animate-ping"></div>
-      <div className="absolute border border-[#333333] rounded-full h-[300px] w-[300px] top-20 right-10"></div>
-      <div className="absolute border border-[#333333] rounded-full h-[500px] w-[500px] top-40 left-20"></div>
-      <div className="absolute border border-[#1976d2] rounded-full h-[650px] w-[650px] bottom-20 right-20 opacity-20 animate-pulse"></div>
-      <div className="absolute border border-[#333333] rounded-full h-[800px] w-[800px] bottom-10 left-10"></div>
+      <div
+        className="absolute border rounded-full h-[200px] w-[200px] top-10 left-10 animate-ping"
+        style={{ borderColor: "var(--color-border)" }}
+      ></div>
+      <div
+        className="absolute border border-[#333333] rounded-full h-[300px] w-[300px] top-20 right-10"
+        style={{ borderColor: "var(--color-border)" }}
+      ></div>
+      <div
+        className="absolute border border-[#333333] rounded-full h-[500px] w-[500px] top-40 left-20"
+        style={{ borderColor: "var(--color-border)" }}
+      ></div>
+      <div
+        className="absolute border border-[#1976d2] rounded-full h-[650px] w-[650px] bottom-20 right-20 opacity-20 animate-pulse"
+        style={{ borderColor: "var(--color-primary)" }}
+      ></div>
+      <div
+        className="absolute border border-[#333333] rounded-full h-[800px] w-[800px] bottom-10 left-10"
+        style={{ borderColor: "var(--color-border)" }}
+      ></div>
     </motion.div>
   );
 };

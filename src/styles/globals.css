@@ -36,9 +36,19 @@
         background-color: inherit;
     }
 
+
+    .skill-image {
+        filter: drop-shadow(1px 1px 10px var(--color-contrast));
+        /* Add stroke effect */
+    }
+
+    .company-image {
+        filter: drop-shadow(1px 1px 5px var(--color-contrast));
+    }
+
     .img-stroke {
-        border: solid 1px transparent;
-        margin: 10px;
+        /* border: solid 1px transparent;
+        margin: 10px; */
 
         /* -webkit-filter: drop-shadow(0.5px 0.5px 0 var(--color-contrast)) drop-shadow(-0.5px 0.5px 0 var(--color-contrast)) drop-shadow(0.5px -0.5px 0 var(--color-contrast)) drop-shadow(-0.5px -0.5px 0 var(--color-contrast));
 
