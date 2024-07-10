@@ -23,7 +23,7 @@ const BackgroundCircles = (props: Props) => {
     //   <div className="absolute border border-[#333333] rounded-full h-[200px] w-[200px] mt-52 animate-ping"></div>
     //   <div className="absolute border border-[#333333] rounded-full h-[300px] w-[300px] mt-52 "></div>
     //   <div className="absolute border border-[#333333] rounded-full h-[500px] w-[500px] mt-52 "></div>
-    //   <div className="absolute border border-[#f7ab0a] rounded-full h-[650px] w-[650px] mt-52 opacity-20 animate-pulse"></div>
+    //   <div className="absolute border border-[#1976d2] rounded-full h-[650px] w-[650px] mt-52 opacity-20 animate-pulse"></div>
     //   <div className="absolute border border-[#333333] rounded-full h-[800px] w-[800px] mt-52 "></div>
     // </motion.div>
     <motion.div
@@ -39,7 +39,7 @@ const BackgroundCircles = (props: Props) => {
       <div className="absolute border border-[#333333] rounded-full h-[200px] w-[200px] top-10 left-10 animate-ping"></div>
       <div className="absolute border border-[#333333] rounded-full h-[300px] w-[300px] top-20 right-10"></div>
       <div className="absolute border border-[#333333] rounded-full h-[500px] w-[500px] top-40 left-20"></div>
-      <div className="absolute border border-[#f7ab0a] rounded-full h-[650px] w-[650px] bottom-20 right-20 opacity-20 animate-pulse"></div>
+      <div className="absolute border border-[#1976d2] rounded-full h-[650px] w-[650px] bottom-20 right-20 opacity-20 animate-pulse"></div>
       <div className="absolute border border-[#333333] rounded-full h-[800px] w-[800px] bottom-10 left-10"></div>
     </motion.div>
   );

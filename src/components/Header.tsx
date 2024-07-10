@@ -13,7 +13,7 @@ export default function Header({ socials }: Props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className=" lg:flex lg:items-center border-b border-[#f7ab0a]/40 bg-[rgb(28,28,28)] lg:justify-between sticky top-0 p-0 items-center justify-between w-screen z-30">
+    <header className=" lg:flex lg:items-center border-b border-[#1976d2]/40 bg-[#0e3155] lg:justify-between sticky top-0 p-0 items-center justify-between w-screen z-30">
       <motion.div
         initial={{
           x: -500,
@@ -29,7 +29,7 @@ export default function Header({ socials }: Props) {
           duration: 0.5,
         }}
         viewport={{ once: true }}
-        className="flex flex-row items-center justify-between bg-[rgb(28,28,28)]"
+        className="flex flex-row items-center justify-between bg-[#0e3155]"
       >
         {/* SOcial Icons */}
         <div className="flex flex-row items-center justify-between">
@@ -37,17 +37,21 @@ export default function Header({ socials }: Props) {
             <SocialIcon
               key={social._id}
               url={social.linkToProfile}
-              fgColor="gray"
+              fgColor="var(--color-bg)"
               bgColor="transparent"
             />
           ))}
         </div>
 
         <div
-          className="text-[#f7ab0a] h-10 w-10 mx-4 cursor-pointer lg:hidden block"
+          className="text-[#1976d2] h-10 w-10 mx-4 cursor-pointer lg:hidden block"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          {isMenuOpen ? <XMarkIcon /> : <Bars3Icon />}
+          {isMenuOpen ? (
+            <XMarkIcon color="var(--color-bg)" />
+          ) : (
+            <Bars3Icon color="var(--color-bg)" />
+          )}
         </div>
       </motion.div>
 
@@ -72,7 +76,7 @@ export default function Header({ socials }: Props) {
         // }}
 
         viewport={{ once: true }}
-        className={`lg:flex lg:items-center absolute bg-[rgb(28,28,28)] w-full left-0 z-[-30] lg:z-auto lg:static lg:w-auto py-4 lg:py-0 pl-6 lg:pl-0 transition-all ease-in duration-500 border-b lg:border-none border-[#f7ab0a]/40 ${
+        className={`lg:flex lg:items-center absolute bg-[#0e3155] w-full left-0 z-[-30] lg:z-auto lg:static lg:w-auto py-4 lg:py-0 pl-6 lg:pl-0 transition-all ease-in duration-500 border-b lg:border-none border-[#1976d2]/40 ${
           isMenuOpen ? "top-10" : "top-[-490px]"
         }`}
       >

@@ -2,14 +2,23 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Experience } from "typings";
 import { urlFor } from "../../lib/sanity";
+import { useTheme } from "@/context/ThemeContext";
 
 type Props = {
   experience: Experience;
 };
 
 function ExperienceCard({ experience }: Props) {
+  const { theme } = useTheme();
+
+  const backgroundColor = theme === "dark" ? "#292929" : "#f0f0f0"; // Light mode color is set to a lighter shade
+  const blurColor = theme === "dark" ? "#121212" : "#ffffff";
+
   return (
-    <article className="flex flex-col rounded-lg items-center text-center justify-center flex-shrink-0 w-full sm:w-5/6 md:w-2/3  snap-center bg-[#292929] cursor-pointer transition-opacity duration-200 overflow-hidden ">
+    <article
+      className="flex flex-col rounded-lg items-center text-center justify-center flex-shrink-0 w-full sm:w-5/6 md:w-2/3  snap-center cursor-pointer transition-opacity duration-200 overflow-hidden "
+      style={{ backgroundColor: backgroundColor }}
+    >
       <motion.img
         initial={{
           y: -80,
@@ -26,11 +35,11 @@ function ExperienceCard({ experience }: Props) {
         //   once: true,
         // }}
         className="mb-5 rounded-full object-contain object-center"
-        style={{ maxWidth: "16rem", maxHeight: "4rem" }}
+        style={{ maxWidth: "16rem", height: "4rem" }}
         src={urlFor(experience?.companyImage).url()}
       />
 
-      <div className="w-full px-0 space-y-4 md:px-2">
+      <div className="w-full space-y-4 px-3 md:px-4">
         <div className="space-y-1">
           <h4 className="text-xl sm:text-3xl font-bold">
             {experience.jobTitle}
@@ -38,7 +47,9 @@ function ExperienceCard({ experience }: Props) {
           <p className="text-base sm:text-lg font-bold">{experience.company}</p>
           <p className="text-base sm:text-lg">{experience.location}</p>
 
-          <p className=" text-gray-300">{`From ${experience.dateStarted} to ${
+          <p className="text-base sm:text-med italic">{`From ${
+            experience.dateStarted
+          } to ${
             experience.isCurrentlyWorkingHere ? "Present" : experience.dateEnded
           }`}</p>
         </div>
@@ -58,7 +69,10 @@ function ExperienceCard({ experience }: Props) {
             </div>
           ))}
         </div>
-        <ul className=" space-y-2 py-4 text-sm lg:text-base px-6 max-h-44  overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#f7ab0a]/80">
+        <ul
+          className="list-disc space-y-2 py-4 text-sm lg:text-base px-6 h-44  overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#1976d2]/80"
+          style={{ backgroundColor: "var(--color-bg)", textAlign: "left" }}
+        >
           {experience.points.map((point, i) => (
             <li key={i}>{point}</li>
           ))}

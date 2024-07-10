@@ -21,7 +21,10 @@ const About = ({ pageInfo }: Props) => {
       }}
       className="flex flex-col relative px-10 xl:px-20 2xl:px-32 h-screen text-center md:text-center lg:space-x-4 lg:flex-row max-w-7xl xl:space-x-12 xl:max-w-max mx-auto items-center justify-center"
     >
-      <h3 className="absolute top-20 lg:top-24 uppercase tracking-[1rem] text-gray-500 text-2xl text-center">
+      <h3
+        className="absolute top-20 lg:top-24 uppercase tracking-[1rem] text-2xl text-center font-bold"
+        style={{ color: "#1976d2" }}
+      >
         About
       </h3>
       <motion.img
@@ -63,7 +66,7 @@ const About = ({ pageInfo }: Props) => {
         {/* <h4 className="text-4xl font-semibold">
           Here is a little background..{" "}
         </h4> */}
-        <p className="text-sm lg:text-base xl:text-lg h-full overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#f7ab0a]/80 px-3 sm:flex sm:items-center">
+        <p className="text-sm lg:text-base xl:text-lg h-full overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#1976d2]/80 px-3 sm:flex sm:items-center">
           {pageInfo?.backgroundInformation}
         </p>
       </motion.div>
