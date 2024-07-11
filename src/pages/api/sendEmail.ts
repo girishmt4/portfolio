@@ -31,30 +31,30 @@ export default async function handler(
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
       html: `
         <html>
-<head>
-  <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; }
-    .container { width: 80%; margin: auto; padding: 20px; }
-    .header { text-align: center; padding: 10px 0; border-bottom: 1px solid #eaeaea; }
-    .content { margin: 20px 0; }
-    .footer { text-align: center; padding: 10px 0; border-top: 1px solid #eaeaea; font-size: 0.9em; color: #777; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="header"><h2>Contact Form Submission</h2></div>
-    <div class="content">
-      <p>Name: ${name}</p>
-      <p>Email: ${email}</p>
-      <p>Message:</p>
-      <p>${message}</p>
-    </div>
-    <div class="footer">
-      <p>Received via girishtiwale.com</p>
-    </div>
-  </div>
-</body>
-</html>
+        <head>
+          <style>
+            body { font-family: Arial, sans-serif; line-height: 1.6; }
+            .container { width: 80%; margin: auto; padding: 20px; }
+            .header { text-align: center; padding: 10px 0; border-bottom: 1px solid #eaeaea; }
+            .content { margin: 20px 0; }
+            .footer { text-align: center; padding: 10px 0; border-top: 1px solid #eaeaea; font-size: 0.9em; color: #777; }
+          </style>
+        </head>
+        <body>
+          <div class="container">
+            <div class="header"><h2>Contact Form Submission</h2></div>
+            <div class="content">
+              <p>Name: ${name}</p>
+              <p>Email: ${email}</p>
+              <p>Message:</p>
+              <p>${message}</p>
+            </div>
+            <div class="footer">
+              <p>Received via girishtiwale.com</p>
+            </div>
+          </div>
+        </body>
+        </html>
       `,
     };
 
@@ -65,39 +65,38 @@ export default async function handler(
       subject: "Thank you for contacting me!",
       text: "Thank you for contacting me. I will get back to you!",
       html: `
-          <html>
-<head>
-  <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; }
-    .container { width: 80%; margin: auto; padding: 20px; }
-    .header { text-align: center; padding: 10px 0; border-bottom: 1px solid #eaeaea; }
-    .content { margin: 20px 0; }
-    .footer { text-align: center; padding: 10px 0; border-top: 1px solid #eaeaea; font-size: 0.9em; color: #777; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="header"><h2>Thank You for Contacting Me!</h2></div>
-    <div class="content">
-      <p>Hi ${name},</p>
-      <p>Thank you for reaching out to me. I have received your message and will get back to you as soon as possible.</p>
-      <p>If you have any further questions, please feel free to reply to this email.</p>
-      <br>
-      <p>Best regards,</p>
-      <p>Girish Tiwale</p>
-      <p>Full Stack Developer</p>
-      <p><a href="https://girishtiwale.com">Portfolio</a></p>
-    </div>
-    <div class="footer">
-      <p>Girish Tiwale</p>
-    </div>
-  </div>
-</body>
-</html>
+        <html>
+        <head>
+          <style>
+            body { font-family: Arial, sans-serif; line-height: 1.6; }
+            .container { width: 80%; margin: auto; padding: 20px; }
+            .header { text-align: center; padding: 10px 0; border-bottom: 1px solid #eaeaea; }
+            .content { margin: 20px 0; }
+            .footer { text-align: center; padding: 10px 0; border-top: 1px solid #eaeaea; font-size: 0.9em; color: #777; }
+          </style>
+        </head>
+        <body>
+          <div class="container">
+            <div class="header"><h2>Thank You for Contacting Me!</h2></div>
+            <div class="content">
+              <p>Hi ${name},</p>
+              <p>Thank you for reaching out to me. I have received your message and will get back to you as soon as possible. I appreciate you taking the time to contact me.</p>
+              <p>If you have any further questions or need additional information, please feel free to reply to this email. I am always here to assist you and ensure you have the best experience possible.</p>
+              <p>Your interest and engagement mean a lot to me. I am committed to providing you with the support you need. Whether it’s a question, feedback, or any other inquiry, I am just an email away.</p>
+              <p>Once again, thank you for reaching out. I look forward to connecting with you and addressing any concerns or questions you might have.</p>
+              <br>
+              <p>Best regards,</p>
+              <p>Girish Tiwale</p>
+              <p>Full Stack Developer</p>
+              <p><a href="https://girishtiwale.com">girishtiwale.com</a></p>
+            </div>
+            <div class="footer">
+              <p>Girish Tiwale</p>
+            </div>
+          </div>
+        </body>
+        </html>
       `,
-      headers: {
-        "List-Unsubscribe": "<mailto:unsubscribe@girishtiwale.com>",
-      },
     };
 
     try {
