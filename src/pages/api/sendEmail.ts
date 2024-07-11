@@ -35,14 +35,19 @@ export default async function handler(
           <style>
             body { font-family: Arial, sans-serif; line-height: 1.6; }
             .container { width: 80%; margin: auto; padding: 20px; }
-            .header { text-align: center; padding: 10px 0; border-bottom: 1px solid #eaeaea; }
+            .header { display: flex; align-items: center; justify-content: center; padding: 10px 0; border-bottom: 1px solid #eaeaea; }
+            .header img { margin-right: 10px; }
             .content { margin: 20px 0; }
-            .footer { text-align: center; padding: 10px 0; border-top: 1px solid #eaeaea; font-size: 0.9em; color: #777; }
+            .footer { display: flex; align-items: center; justify-content: center; padding: 10px 0; border-top: 1px solid #eaeaea; font-size: 0.9em; color: #777; }
+            .footer img { margin-right: 10px; }
           </style>
         </head>
         <body>
           <div class="container">
-            <div class="header"><h2>Contact Form Submission</h2></div>
+            <div class="header">
+              <img src="https://girishtiwale.com/favicon.png" alt="Logo" width="32" height="32"/>
+              <h2>Contact Form Submission</h2>
+            </div>
             <div class="content">
               <p>Name: ${name}</p>
               <p>Email: ${email}</p>
@@ -50,6 +55,7 @@ export default async function handler(
               <p>${message}</p>
             </div>
             <div class="footer">
+              <img src="https://girishtiwale.com/favicon.ico" alt="Favicon" width="16" height="16"/>
               <p>Received via girishtiwale.com</p>
             </div>
           </div>
@@ -70,27 +76,38 @@ export default async function handler(
           <style>
             body { font-family: Arial, sans-serif; line-height: 1.6; }
             .container { width: 80%; margin: auto; padding: 20px; }
-            .header { text-align: center; padding: 10px 0; border-bottom: 1px solid #eaeaea; }
+            .header { display: flex; align-items: center; justify-content: center; padding: 10px 0; border-bottom: 1px solid #eaeaea; }
+            .header img { margin-right: 10px; }
             .content { margin: 20px 0; }
-            .footer { text-align: center; padding: 10px 0; border-top: 1px solid #eaeaea; font-size: 0.9em; color: #777; }
+            .footer { display: flex; align-items: center; justify-content: center; padding: 10px 0; border-top: 1px solid #eaeaea; font-size: 0.9em; color: #777; }
+            .footer img { margin-right: 10px; }
           </style>
         </head>
         <body>
           <div class="container">
-            <div class="header"><h2>Thank You for Contacting Me!</h2></div>
+            <div class="header">
+              <img src="https://girishtiwale.com/favicon.png" alt="Logo" width="32" height="32"/>
+              <h2>Thank You for Contacting Me!</h2>
+            </div>
             <div class="content">
               <p>Hi ${name},</p>
               <p>Thank you for reaching out to me. I have received your message and will get back to you as soon as possible. I appreciate you taking the time to contact me.</p>
-              <p>If you have any further questions or need additional information, please feel free to reply to this email. I am always here to assist you and ensure you have the best experience possible.</p>
+              <p>I am an experienced Full Stack Developer with 2+ years of experience in web application development. I have been developing full stack applications that provide mobile-friendly, responsive and visually appealing UI and robust backend functionalities in the domain of web application development.</p>
+              <p>If you have any further questions or need additional information, please do not hesitate to reply to this email. I am always here to assist you and ensure you have the best experience possible.</p>
               <p>Your interest and engagement mean a lot to me. I am committed to providing you with the support you need. Whether it’s a question, feedback, or any other inquiry, I am just an email away.</p>
-              <p>Once again, thank you for reaching out. I look forward to connecting with you and addressing any concerns or questions you might have.</p>
+              <p>Once again, thank you for reaching out. I look forward to connecting with you!</p>
               <br>
-              <p>Best regards,</p>
-              <p>Girish Tiwale</p>
-              <p>Full Stack Developer</p>
-              <p><a href="https://girishtiwale.com">girishtiwale.com</a></p>
+              <p>Best regards,
+              <br>
+              Girish Tiwale
+              <br>
+              Full Stack Developer
+              <br>
+              <a href="https://girishtiwale.com">My Portfolio</a>
+              </p>
             </div>
             <div class="footer">
+              <img src="https://girishtiwale.com/favicon.ico" alt="Favicon" width="16" height="16"/>
               <p>Girish Tiwale</p>
             </div>
           </div>
