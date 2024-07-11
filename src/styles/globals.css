@@ -18,13 +18,18 @@
     }
 
     .contactInput {
-        @apply outline-none rounded-sm border-b px-6 py-4 border-[#d1d5db] text-gray-400 placeholder-gray-500 transition-all focus:border-[#1976d2]/40 hover:border-[#1976d2]/40 focus:text-[#1976d2]/40;
+        @apply outline-none rounded-sm border-b-2 px-6 py-4 border-[#d1d5db] text-gray-400 placeholder-gray-500 transition-all hover:border-[#1976d2]/40 focus:text-[#1976d2]/40;
         background-color: var(--color-shade);
         color: var(--color-contrast);
     }
 
     .contactInput:focus {
         color: var(--color-contrast);
+        border-color: var(--color-primary);
+    }
+
+    .contactInput:hover {
+        border-color: var(--color-primary);
     }
 
     header {
@@ -36,10 +41,8 @@
         background-color: inherit;
     }
 
-
     .skill-image {
         filter: drop-shadow(1px 1px 10px var(--color-contrast));
-        /* Add stroke effect */
     }
 
     .company-image {
@@ -104,4 +107,16 @@ body {
 .scrollbar-thin::-webkit-scrollbar-track {
     background-color: var(--color-bg);
     /* track color */
+}
+
+/* Prevent background color change on autofill */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px var(--color-shade) inset !important;
+    box-shadow: 0 0 0px 1000px var(--color-shade) inset !important;
+    -webkit-text-fill-color: var(--color-text) !important;
 }

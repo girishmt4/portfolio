@@ -1,7 +1,10 @@
-import React from "react";
-// import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
+import React, { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useTheme } from "@/context/ThemeContext";
+import MuiAlert, { AlertProps } from "@mui/material/Alert";
+import Button from "@mui/material/Button";
+import CircularProgress from "@mui/material/CircularProgress";
+import Snackbar from "@mui/material/Snackbar";
 
 type Props = {};
 
@@ -12,13 +15,64 @@ type Inputs = {
   message: string;
 };
 
-const ContactMe = (props: Props) => {
-  const { register, handleSubmit } = useForm<Inputs>();
-  const { theme } = useTheme();
+const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
+  props,
+  ref
+) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
-  const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    window.location.href = `mailto:gmtiwale@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
+const ContactMe = (props: Props) => {
+  const { register, handleSubmit, reset } = useForm<Inputs>();
+  const { theme } = useTheme();
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState("");
+  const [severity, setSeverity] = useState<"success" | "error">("success");
+
+  const handleClose = (
+    event?: React.SyntheticEvent | Event,
+    reason?: string
+  ) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpen(false);
   };
+
+  const onSubmit: SubmitHandler<Inputs> = async (formData) => {
+    setLoading(true);
+    try {
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setSeverity("success");
+        setSnackbarMessage(
+          "Thank you for contacting me. I will get back to you!"
+        );
+        reset();
+      } else {
+        setSeverity("error");
+        setSnackbarMessage("Failed to send email.");
+      }
+    } catch (error) {
+      setSeverity("error");
+      setSnackbarMessage("Failed to send email.");
+      console.error(error);
+    } finally {
+      setOpen(true);
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="h-screen relative flex flex-col text-center md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
       <h3
@@ -90,16 +144,40 @@ const ContactMe = (props: Props) => {
             className="contactInput w-full"
             rows={5}
           />
-          <button
+          <Button
             type="submit"
-            className="bg-[#1976d2] animate-pulse py-2 px-10 rounded-md text-white font-bold text-lg w-4/6  flex items-center justify-center text-center"
+            variant="contained"
+            color="primary"
+            className="animate-pulse w-full"
+            disabled={loading}
             style={{
               backgroundColor: "var(--color-primary)",
             }}
           >
-            Submit
-          </button>
+            {loading && (
+              <CircularProgress
+                size={24}
+                color="inherit"
+                style={{ marginRight: 8 }}
+              />
+            )}
+            Send
+          </Button>
         </form>
+        <Snackbar
+          open={open}
+          autoHideDuration={6000}
+          onClose={handleClose}
+          anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+        >
+          <Alert
+            onClose={handleClose}
+            severity={severity}
+            style={{ backgroundColor: "var(--color-primary)" }}
+          >
+            {snackbarMessage}
+          </Alert>
+        </Snackbar>
       </div>
     </div>
   );
