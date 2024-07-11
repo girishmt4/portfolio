@@ -3,7 +3,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import sgMail from "@sendgrid/mail";
 
-sgMail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY as string);
+sgMail.setApiKey(process.env.SENDGRID_API_KEY as string);
 
 export default async function handler(
   req: NextApiRequest,
@@ -14,9 +14,9 @@ export default async function handler(
 
     // Type guards to ensure environment variables are defined
     if (
-      !process.env.NEXT_PUBLIC_MY_EMAIL ||
-      !process.env.NEXT_PUBLIC_VERIFIED_EMAIL ||
-      !process.env.NEXT_PUBLIC_MY_NAME
+      !process.env.MY_EMAIL ||
+      !process.env.VERIFIED_EMAIL ||
+      !process.env.MY_NAME
     ) {
       res
         .status(500)
@@ -25,8 +25,8 @@ export default async function handler(
     }
 
     const msgToYou = {
-      to: process.env.NEXT_PUBLIC_MY_EMAIL, // Your personal email address
-      from: process.env.NEXT_PUBLIC_VERIFIED_EMAIL, // Your verified sender email address
+      to: process.env.MY_EMAIL, // Your personal email address
+      from: process.env.VERIFIED_EMAIL, // Your verified sender email address
       replyTo: email, // User's email address
       subject: `Contact Form Submission: ${subject}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
@@ -34,8 +34,8 @@ export default async function handler(
 
     const msgToUser = {
       to: email, // User's email address
-      from: `${process.env.NEXT_PUBLIC_MY_NAME} <${process.env.NEXT_PUBLIC_MY_EMAIL}>`, // Your verified sender email address
-      replyTo: process.env.NEXT_PUBLIC_MY_EMAIL,
+      from: `${process.env.MY_NAME} <${process.env.MY_EMAIL}>`, // Your verified sender email address
+      replyTo: process.env.MY_EMAIL,
       subject: "Thank you for contacting me!",
       text: "Thank you for contacting me. I will get back to you!",
     };
