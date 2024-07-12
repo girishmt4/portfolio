@@ -86,7 +86,6 @@ export default async function handler(
         <body>
           <div class="container">
             <div class="header">
-              <img src="https://girishtiwale.com/favicon.png" alt="Logo" width="32" height="32"/>
               <h2>Thank You for Contacting Me!</h2>
             </div>
             <div class="content">
@@ -107,7 +106,6 @@ export default async function handler(
               </p>
             </div>
             <div class="footer">
-              <img src="https://girishtiwale.com/favicon.ico" alt="Favicon" width="16" height="16"/>
               <p>Girish Tiwale</p>
             </div>
           </div>
