@@ -53,5 +53,11 @@ export default defineType({
       title: 'LinkToRepo',
       type: 'url',
     },
+    {
+      name: 'demoLink',
+      title: 'Demo Link',
+      type: 'url',
+      description: 'Link to a live demo of the project',
+    },
   ],
 })

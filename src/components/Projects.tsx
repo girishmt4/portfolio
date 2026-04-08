@@ -53,7 +53,7 @@ const Projects = ({ projects }: Props) => {
               // viewport={{
               //   once: true,
               // }}
-              className="h-24 w-24 mb-5 md:h-32 md:w-32 object-cover object-center"
+              className="h-40 w-40 mb-5 md:h-52 md:w-52 object-contain object-center"
               src={
                 project.image
                   ? urlFor(project.image).url()
@@ -102,6 +102,21 @@ const Projects = ({ projects }: Props) => {
                   <li key={i}>{point}</li>
                 ))}
               </ul>
+
+              {project.demoLink && (
+                <a
+                  href={project.demoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-6 py-2 rounded-md text-sm font-semibold tracking-wide uppercase transition-colors duration-200"
+                  style={{
+                    backgroundColor: "var(--color-primary)",
+                    color: "var(--color-bg)",
+                  }}
+                >
+                  Demo
+                </a>
+              )}
             </div>
           </div>
         ))}

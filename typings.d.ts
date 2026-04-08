@@ -48,6 +48,7 @@ export interface Project extends SanityBody {
   image?: Image;
   order?: number;
   linkToRepo: string;
+  demoLink?: string;
   summary: string[];
   technologies: Technology[];
 }
