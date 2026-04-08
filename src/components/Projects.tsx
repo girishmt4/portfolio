@@ -54,7 +54,11 @@ const Projects = ({ projects }: Props) => {
               //   once: true,
               // }}
               className="h-24 w-24 mb-5 md:h-32 md:w-32 object-cover object-center"
-              src="https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+              src={
+                project.image
+                  ? urlFor(project.image).url()
+                  : "https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+              }
               // className="object-cover object-center w-24 h-24 mb-5 md:h-32 md:w-32"
               // mb-5 md:h-32 md:w-32 rounded-full object-contain object-center
             />
